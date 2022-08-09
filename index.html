@@ -3,13 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>Trabalhando com Ajax</title>
+        
+        <!-- Script -->
+        <script>
+
+            function cadastrar(){
+               
+                //variaveis
+                var curso = document.getElementById("curso").value;
+                var valor = document.getElementById("valor").value;
+
+                //Exibir os dados
+                window.alert("O curso é "+curso+" e o valor é: "+valor);
+            }
+
+        </script>
     </head>
 <body>
     <!--Formulario-->
-    <form action="php/cadastrar.php" method="post">
-        <input type="text" placeholder="Curso" name="curso">
-        <input type="number" placeholder="Valor" name="valor">
-        <input type="submit">
+    <form method="post">
+        <input type="text" placeholder="Curso" name="curso" id="curso">
+        <input type="number" placeholder="Valor" name="valor" id="valor">
+        <input type="button" value="Cadastrar" onclick="cadastrar()">
     </form>
     
 </body>
